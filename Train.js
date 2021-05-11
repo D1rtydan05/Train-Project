@@ -49,16 +49,16 @@ let location = 0;
 //step 3
 for (let i = 0; i < input.length; i++){
     if(input[i] == "("){
-        if(input[i+2] =="("){
+        if(input[i + 1] =="("){
+            i++;
             location--;
-            i + 2;
         }else{
             location--;
         }
-    }else if(input[i] == ")"){
-        if(input[i+2] ==")"){
+    }else{
+        if(input[i + 1] ==")"){
+            i++;
             location++;
-            i + 2;
         }else{
             location++;
         }
